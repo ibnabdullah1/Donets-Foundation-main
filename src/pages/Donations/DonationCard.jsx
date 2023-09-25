@@ -11,15 +11,15 @@ const DonationCard = ({ donationItem }) => {
     category,
     card_bg_color,
   } = donationItem || {};
-  console.log(image_card);
+
   return (
     <div
       style={{ background: card_bg_color }}
       className="flex gap-3 rounded-lg"
     >
-      <div>
+      <div className="h-full w-[250px] md:w-[280px] lg:w-[280px]">
         <img
-          className="h-full w-[300px] md:w-[280px]"
+          className="h-full w-[250px] md:w-[280px] lg:w-[280px]"
           src={image_card}
           alt=""
         />

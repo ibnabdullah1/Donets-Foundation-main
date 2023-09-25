@@ -15,7 +15,6 @@ const Donations = () => {
       setNoFound("No Data Found");
     }
   }, []);
-  console.log(donations);
 
   return (
     <div>
@@ -23,7 +22,7 @@ const Donations = () => {
         <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
       ) : (
         <div>
-          <div className=" grid  lg:grid-cols-2 grid-cols-1 px-3 gap-6 md:px-6 lg:px-8">
+          <div className=" grid  md:grid-cols-1 lg:grid-cols-2 grid-cols-1 px-3 gap-6 md:px-6 lg:px-8">
             {isShow
               ? donations.map((donationItem) => (
                   <DonationCard
