@@ -5,7 +5,6 @@ import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import CardItemDetails from "../pages/CardItemDetails/CardItemDetails";
 import Donations from "../pages/Donations/Donations";
-import PieChart from "../pages/Statistics/Statistics";
 import Statistics from "../pages/Statistics/Statistics";
 // import CardItems from "../pages/CardItems/CardItems";
 

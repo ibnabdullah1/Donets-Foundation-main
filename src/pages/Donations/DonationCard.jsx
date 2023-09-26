@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const DonationCard = ({ donationItem }) => {
   const {
@@ -15,17 +16,17 @@ const DonationCard = ({ donationItem }) => {
   return (
     <div
       style={{ background: card_bg_color }}
-      className="flex gap-3 rounded-lg"
+      className="flex gap-3 md:gap-3 lg:gap-3 rounded-lg"
     >
-      <div className="h-full w-[250px] md:w-[280px] lg:w-[280px]">
+      <div className="h-full  md:w-[280px] lg:w-[280px]">
         <img
-          className="h-full w-[250px] md:w-[280px] lg:w-[280px]"
+          className="h-full w-[200px] md:w-[280px] lg:w-[280px]"
           src={image_card}
           alt=""
         />
       </div>
       <div className=" flex justify-center items-center">
-        <div className="p-4">
+        <div className="lg:p-4">
           <h4
             style={{
               background: category_bg_color,
@@ -35,14 +36,14 @@ const DonationCard = ({ donationItem }) => {
           >
             {category}
           </h4>
-          <h2 className="font-bold md:text-2xl  text-lg text-black my-2">
+          <h2 className="font-bold md:text-2xl text-base lg:text-lg text-black mt-1">
             {title}
           </h2>
           <h3
             style={{
               color: text_button_bg_color,
             }}
-            className="font-bold text-lg mb-3"
+            className="font-bold text-lg mb-1"
           >
             ${price}
           </h3>
@@ -61,5 +62,7 @@ const DonationCard = ({ donationItem }) => {
     </div>
   );
 };
-
+DonationCard.propTypes = {
+  donationItem: PropTypes.object.isRequired,
+};
 export default DonationCard;

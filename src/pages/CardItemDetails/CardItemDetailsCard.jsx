@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Card.css";
 import swal from "sweetalert";
+import PropTypes from "prop-types";
 const CardItemDetailsCard = ({ cardDetails }) => {
   const { id, image, price, text_button_bg_color, title, description } =
     cardDetails || {};
@@ -50,7 +51,9 @@ const CardItemDetailsCard = ({ cardDetails }) => {
     </div>
   );
 };
-
+CardItemDetailsCard.propTypes = {
+  cardDetails: PropTypes.object.isRequired,
+};
 export default CardItemDetailsCard;
 
 /* */

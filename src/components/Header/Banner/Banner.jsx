@@ -1,8 +1,8 @@
 // Banner.js
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Banner.css";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const Banner = ({ handleSearch }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -10,6 +10,7 @@ const Banner = ({ handleSearch }) => {
     setInputValue(e.target.value);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const handleSearchClick = (e) => {
     handleSearch(inputValue);
   };
@@ -27,7 +28,7 @@ const Banner = ({ handleSearch }) => {
         className="text-center min-h-[80vh] md:mb-10"
       >
         <div className="overlay flex justify-center items-center">
-          <div className="">
+          <div className="px-3">
             <h2 className="text-4xl font-bold mb-6">
               I Grow By Helping People In Need
             </h2>
@@ -60,5 +61,7 @@ const Banner = ({ handleSearch }) => {
     </>
   );
 };
-
+Banner.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+};
 export default Banner;

@@ -1,7 +1,8 @@
 import React from "react";
-import { Navbar, MobileNav, IconButton } from "@material-tailwind/react";
+import { Navbar, Collapse, IconButton } from "@material-tailwind/react"; // Import Collapse
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
+import "./Nav.css";
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -63,15 +64,15 @@ export function StickyNavbar() {
 
   return (
     <div className="">
-      <Navbar className="sticky top-0   rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky  top-0 rounded-none py-2 md:px-10 px-5 lg:px-8 lg:py-3">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Logo />
-          <div className="flex items-center gap-4">
+          <div className="flex  items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
 
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-red-500 hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className=" h-6 w-6 text-red-500 flex justify-center items-center hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -94,10 +95,11 @@ export function StickyNavbar() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
                   className="h-10 w-10"
                   viewBox="0 0 24 24"
-                  fill="none"
                   stroke="currentColor"
+                  color="red"
                   strokeWidth={2}
                 >
                   <path
@@ -111,10 +113,12 @@ export function StickyNavbar() {
           </div>
         </div>
 
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
+          {" "}
+          {/* Use Collapse component instead of MobileNav */}
           <hr className="h-[2px] bg-gray-200 mt-4" />
           {navList}
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </div>
   );

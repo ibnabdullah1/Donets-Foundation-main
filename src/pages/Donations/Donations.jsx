@@ -11,7 +11,6 @@ const Donations = () => {
     if (donationItems) {
       setDonations(donationItems);
     } else {
-      console.log("No data found");
       setNoFound("No Data Found");
     }
   }, []);
