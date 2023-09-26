@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import PieColor from "./PieChart";
+import PieArcLabel from "./PieChart";
 
 const Statistics = () => {
   const [donations, setDonations] = useState(0);
@@ -16,7 +16,7 @@ const Statistics = () => {
       setDonations(donationItems?.length);
     }
 
-    console.log(donationItems, donations);
+    // console.log(donationItems, donations);
     const cardItemsPercentage = parseFloat(
       (((totalDonationLength - donations) / totalDonationLength) * 100).toFixed(
         2
@@ -31,8 +31,8 @@ const Statistics = () => {
   }, [donations, totalDonationLength]);
 
   return (
-    <div className="min-h-[70vh]  flex justify-center items-center">
-      <PieColor
+    <div className="min-h-[70vh] py-20 w-auto flex justify-center items-center">
+      <PieArcLabel
         cardPercentage={cardPercentage}
         donationPercentage={donationPercentage}
       />

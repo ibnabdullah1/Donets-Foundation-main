@@ -12,7 +12,7 @@ const CardItemDetailsCard = ({ cardDetails }) => {
     if (!donationItems) {
       donationStoredArray.push(cardDetails);
       localStorage.setItem("donations", JSON.stringify(donationStoredArray));
-      swal("Good job!", "Products added successfully!", "success");
+      swal("Good job!", "Donation added successfully!", "success");
     } else {
       const isExits = donationItems.find(
         (cardDetails) => parseInt(cardDetails.id) === id
@@ -20,7 +20,7 @@ const CardItemDetailsCard = ({ cardDetails }) => {
       if (!isExits) {
         donationStoredArray.push(...donationItems, cardDetails);
         localStorage.setItem("donations", JSON.stringify(donationStoredArray));
-        swal("Good job!", "Products added successfully!", "success");
+        swal("Good job!", "Donation added successfully!", "success");
       } else {
         swal("Error!", "No duplicate !", "error");
       }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 
-export default function PieArcLabel({ cardPercentage, donationPercentage }) {
+export default function PieArcLabel2({ cardPercentage, donationPercentage }) {
   const data = [
     { value: donationPercentage, label: "Your Donation", color: "#FF444A" },
     { value: cardPercentage, label: "Total Donation", color: "#00C49F" },

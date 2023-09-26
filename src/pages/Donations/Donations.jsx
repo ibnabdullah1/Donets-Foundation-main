@@ -17,7 +17,7 @@ const Donations = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h[60vh]  py-10 lg:py-20">
       {noFound ? (
         <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
       ) : (
