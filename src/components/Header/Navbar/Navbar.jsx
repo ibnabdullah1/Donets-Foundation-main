@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, MobileNav, IconButton } from "@material-tailwind/react";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
-import "./Nav.css";
+
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
 

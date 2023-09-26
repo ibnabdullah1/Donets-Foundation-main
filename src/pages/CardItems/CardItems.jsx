@@ -1,6 +1,5 @@
-import React from "react";
 import CardItemsCard from "./CardItemsCard";
-
+import PropTypes from "prop-types";
 const CardItems = ({ cardItems, inputValue }) => {
   const filteredItems = cardItems.filter(
     (cardItem) =>
@@ -15,5 +14,8 @@ const CardItems = ({ cardItems, inputValue }) => {
     </div>
   );
 };
-
+CardItems.propTypes = {
+  cardItems: PropTypes.array.isRequired,
+  inputValue: PropTypes.string.isRequired,
+};
 export default CardItems;
